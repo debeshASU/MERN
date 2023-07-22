@@ -2,13 +2,8 @@ const express = require('express');
 require('dotenv').config();
 const DbConnect = require('./database/dbConnection.js');
 DbConnect();
+const cors = require('cors');
 const app = express();
-const corsOptions = {
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add any other HTTP methods your frontend might use
-  };
-  
-  app.use(cors(corsOptions));
 const route = require('./routes/productRoutes.js');
 const router = require('./routes/userRoutes.js');
 
