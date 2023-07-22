@@ -12,7 +12,7 @@ export const Cart = () =>
      const getItems = async () =>
      {
        try{
-          const response = await Axios.get(`http://localhost:5000/users/cartItems/${user_id}`,{headers: {authorization:cookies.Access_Token} });
+          const response = await Axios.get(`http://ecommerce-api.debeshp.com/users/cartItems/${user_id}`,{headers: {authorization:cookies.Access_Token} });
           setCartItems(response.data);
        }
        catch(err)
@@ -24,7 +24,8 @@ export const Cart = () =>
      const getTotalPrice = async () =>
      {
       try{
-         const response = await Axios.get(`http://localhost:5000/users/totalPrice/${user_id}`);
+         const response = await Axios.get(`http://ecommerce-api.debeshp.com/users/totalPrice/${user_id}`);
+         console.log(response.data);
          setTotalPrice(response.data);
       }
       catch(err)

@@ -10,7 +10,7 @@ export const Home = () =>
      const getProducts = async () =>
      {
         try{
-          const response = await Axios.get("http://localhost:5000/products", {headers: {authorization:cookies.Access_Token} } );
+          const response = await Axios.get("https://ecommerce-api.debeshp.com/products", {headers: {authorization:cookies.Access_Token} } );
           setListOfProducts(response.data);
         }
         catch(err)

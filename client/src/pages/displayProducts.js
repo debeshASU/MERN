@@ -10,7 +10,7 @@ export const Display = (props) =>
     {
       try{
         console.log(user_id,p_id);
-        const response = await Axios.put("http://localhost:5000/users/addItem",{user_id,p_id});
+        const response = await Axios.put("https://ecommerce-api.debeshp.com/users/addItem",{user_id,p_id});
         console.log(response);
         setCartItemCount(response.data);
       }

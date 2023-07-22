@@ -10,7 +10,7 @@ export const Register = () =>
      {
         try{
            console.log(username,password);
-           const response = await Axios.post("http://localhost:5000/users/register",{username,password});
+           const response = await Axios.post("https://ecommerce-api.debeshp.com/users/register",{username,password});
            alert(response.data);
         }
         catch(err)

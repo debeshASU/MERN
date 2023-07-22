@@ -9,7 +9,7 @@ export const DisplayCartItems = (props) =>
     const addToCart = async (p_id) =>
     {
       try{
-        const response = await Axios.put("http://localhost:5000/users/addItem",{user_id,p_id});
+        const response = await Axios.put("http://ecommerce-api.debeshp.com/users/addItem",{user_id,p_id});
         setCartQuantity(response.data);
         window.location.reload();
       }
@@ -21,7 +21,7 @@ export const DisplayCartItems = (props) =>
     const removeFromCart = async() =>
     {
         try{
-            const response = await Axios.put("http://localhost:5000/users/removeItem",{user_id,p_id});
+            const response = await Axios.put("http://ecommerce-api.debeshp.com/users/removeItem",{user_id,p_id});
             setCartQuantity(response.data);
             window.location.reload();
         }
@@ -33,7 +33,7 @@ export const DisplayCartItems = (props) =>
     const getProduct = async () =>
     {
         try{
-           const response = await Axios.get(`http://localhost:5000/products/${p_id}`);
+           const response = await Axios.get(`http://ecommerce-api.debeshp.com/products/${p_id}`);
            setProduct(response.data);
            setCartQuantity(quantity);
         }

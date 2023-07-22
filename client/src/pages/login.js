@@ -13,7 +13,7 @@ export const Login = () =>
      {
         try{
           console.log(username,password);
-          const response = await Axios.post("http://localhost:5000/users/login", {username,password});
+          const response = await Axios.post("https://ecommerce-api.debeshp.com/users/login", {username,password});
           setCookies("Access_Token",response.data.token);
           window.localStorage.setItem("user_id",response.data.id);
           alert("LoggedIn Successfully...!!!");
